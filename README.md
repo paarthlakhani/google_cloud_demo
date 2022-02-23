@@ -49,17 +49,16 @@ Run code, deploy web application and have code run on cloud, store data (dbs), f
     c.	Check apache running properly? Run only one command above and then do this sudo systemctl status apache2 <Yes>
         See if second command in 14.b <Yes>
     d.	http://[IP_ADDRESS]
-    e.	echo '<!doctype html><html><body><h1>Hello World!</h1></body></html>' | sudo tee /var/www/html/index.html >>> Might not need this Don’t need this
-    f.	Test by going: http://[YOUR_EXTERNAL_IP_ADDRESS]
+    e.	Test by going: http://[YOUR_EXTERNAL_IP_ADDRESS]
         http will only work, https not configured yet. External IP address will find from the instances page
-    g.	Simplest file in PHP:
+    f.	Simplest file in PHP:
         i.	sudo sh -c 'echo "[YOUR_PHP_CODE]" > /var/www/html/phpinfo.php'
         ii.	We will replace YOUR_PHP_CODE with what we want to write
         iii.	Let’s write the php_info like so:
             sudo sh -c 'echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php'
         iv.	http://[YOUR_EXTERNAL_IP_ADDRESS]/phpinfo.php
-    h.	Custom file in HTML: https://www.php.net/manual/en/tutorial.firstpage.php
-    i.	After the above, go to link: http://[IP_ADDRESS]/
+    g.	Custom file in HTML: https://www.php.net/manual/en/tutorial.firstpage.php
+    h.	After the above, go to link: http://[IP_ADDRESS]/
 19.	Install MySql:
     a.	sudo apt install mysql-server
     b.	Status: sudo service mysql status. Output would show sql is up and running
